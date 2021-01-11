@@ -1,5 +1,6 @@
 body {
-    min-height: 100vh;
+    height: 100vh;
+    min-height: 300px;
     background-color: bisque;
     display: flex;
     align-items: center;
@@ -43,22 +44,30 @@ body {
     top: 0;
 }
 
-.black-keys kbd:nth-child(1) {
+#KeyW {
     left: 75px;
 }
 
-.black-keys kbd:nth-child(2) {
+#KeyE {
     left: 177px;
 }
 
-.black-keys kbd:nth-child(3) {
+#KeyT {
     left: 279px;
 }
 
-.black-keys kbd:nth-child(4) {
+#KeyY {
     left: 482px;
 }
 
-.black-keys kbd:nth-child(5) {
+#KeyU {
     left: 584px;
+}
+
+.white-keys > .pressed {
+    background-color: #ebebeb !important;
+}
+
+.black-keys > .pressed {
+    background-color: #474747 !important;
 }
