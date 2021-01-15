@@ -37,11 +37,7 @@ document.addEventListener("keyup", function (event) {
     document.getElementById(event.code).classList.remove("pressed");
 });
 
-// let notes = '4|----c---d---e-d-c-c-e-c-g-|'
-// notes = notes.split('')
-// notes.splice(1, 1);
-// notes.pop();
-// console.log(notes)
+// ======= Автопроигрывание ========
 
 // Преобразование текста в массив
 function textToArr(notesText) {
@@ -52,12 +48,10 @@ function textToArr(notesText) {
     return notesList;
 };
 
-// ======= Проигрование ========
-
 // Функция перебирания строк (может быть больше чем одна строка если несколько октав)
 function strokePlay(notesList) {
     notesList.forEach(function(notesStrokes, i, notesList) {
-        setTimeout(lineStarter, 3000 * i, notesStrokes)
+        setTimeout(lineStarter, 3000 * i, notesStrokes);
     });
 };
 
@@ -71,30 +65,29 @@ function lineStarter(notesStrokes) {
 function linePlay(octavStroke) {
     octavStroke = octavStroke.split('');
     // --- Удаляет ненужные элементы и присваевает октаве переменную ---
-    octavStroke.pop();
-    octavStroke.pop();
-    let octave = octavStroke.shift();
-    octavStroke.shift();
+    let strokeBegining = octavStroke.indexOf('|')
+    let octave = octavStroke[strokeBegining - 1]
+    octavStroke = octavStroke.slice(strokeBegining + 1, -2);
     // -----------------------------------------------------------------
-    // console.log(octavStroke); // test
     octavStroke.forEach(function(note, noteIndex, octavStroke) {
-        // console.log(note); // test
-        setTimeout(soundPlay, 115 * noteIndex, note, octave)
+        if (note != '-' && note != '|' && note != 'L' && note != 'H' && note != 'R') {
+            let noteAndOctave = note + octave
+            for (key in decodeList) {
+                if (key == noteAndOctave) {
+                    setTimeout(soundPlay, 115 * noteIndex, decodeList[key]);
+                };
+            };
+        };
     });
 };
 
 // Проигрование клавиши
-function soundPlay(note, octave) {
-    if (note != '-') {
-        let noteAndOctave = note + octave
-        for (let key in decodeList) {
-            if (key == noteAndOctave) {
-                let audio = new Audio(`pianoAudio/${decodeList[key]}.mp3`);
-                audio.play();
-            }
-        }
-        console.log(noteAndOctave);
-    }
+function soundPlay(pianoButton) {
+    document.getElementById(pianoButton).classList.add("pressed"); // Добовляет класс со стилем нажатой клавиши
+    setTimeout(() => document.getElementById(pianoButton).classList.remove("pressed"), 200);
+    let audio = new Audio(`pianoAudio/${pianoButton}.mp3`);
+    audio.play();
+    console.log(pianoButton); // test
 };
 
 // ============================
@@ -102,13 +95,3 @@ function soundPlay(note, octave) {
 
 
 strokePlay(textToArr(prompt('Test')));
-
-// setInterval(func|code, [delay], [arg1], [arg2], ...)
-// console.log(notesList); // test
-
-
- 
-// notes = notes.split("\n");
-// console.log(notes);
-
-// console.log("123\\s\n123")
