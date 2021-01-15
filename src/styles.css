@@ -1,7 +1,7 @@
 body {
     height: 100vh;
     min-height: 300px;
-    background-color: bisque;
+    background-color: #e2eaed;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -20,7 +20,7 @@ body {
     justify-content: center;
     align-items: flex-end;
     background-color: white;
-    min-width: 100px;
+    min-width: 34px;
     min-height: 200px;
     border: 1px solid darkgray;
     line-height: 6em;
@@ -30,7 +30,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    min-width: 50px;
+    width: 24px;
     min-height: 140px;
     border: 1px solid darkgray;
     line-height: 6em;
@@ -44,25 +44,29 @@ body {
     top: 0;
 }
 
-#KeyW {
-    left: 75px;
-}
+#Digit8 {left: 20px;}
+#Digit9 {left: 58px;}
+#Digit0 {left: 130px;}
+#Minus {left: 166px;}
+#Equal {left: 202px;}
 
-#KeyE {
-    left: 177px;
-}
+#KeyI {left:274px;}
+#KeyO {left:310px;}
+#KeyP {left:382px;}
+#BracketLeft {left:418px;}
+#BracketRight {left:454px;}
 
-#KeyT {
-    left: 279px;
-}
+#KeyK {left:526px;}
+#KeyL {left:562px;}
+#Semicolon {left:634px;}
+#Quote {left:670px;}
+#Backslash {left:706px;}
 
-#KeyY {
-    left: 482px;
-}
-
-#KeyU {
-    left: 584px;
-}
+#Period {left:778px;}
+#Slash {left:814px;}
+#ShiftRight {left:886px;}
+#ControlRight {left:922px;}
+#Enter {left:958px;}
 
 .white-keys > .pressed {
     background-color: #ebebeb !important;
