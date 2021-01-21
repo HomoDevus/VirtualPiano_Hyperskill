@@ -1,10 +1,89 @@
+a {
+    text-decoration: none;
+}
+
 body {
+    margin: 0;
     height: 100vh;
     min-height: 300px;
     background-color: #e2eaed;
     display: flex;
     align-items: center;
-    justify-content: center;
+    /* justify-content: space-around; */
+    flex-direction: column;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+h1 {
+    color: #2b2b2b;
+    text-align: center;
+    margin: 40px 60px;
+    max-width: 1080px;
+}
+
+#notes-link {
+    color: #47478a;
+    transition: 0.5s all;
+}
+
+#notes-link:hover {
+    color: cornflowerblue;
+}
+
+#input-area {
+    display: flex;
+}
+
+#robot-area {
+    display: flex;
+    align-items: center;
+}
+
+#robot-icon {
+    font-size: 60px;
+    text-align: center;
+    border: 0;
+    background-color: inherit;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: 0.5s;
+    margin: auto 0px;
+}
+
+#robot-icon:focus  {
+    outline: none;
+}
+
+#robot-icon:hover {
+    opacity: 1;
+}
+
+#notes-imput-form {
+    padding-left: 100px;
+    border-left: 1px solid #666666;
+    margin: 0 0 0 100px;
+}
+
+#notes-input {
+    resize: none;
+    margin-top: 10px;
+}
+
+#textarea-play-button {
+    width: 100%;
+    height: 40px;
+    border: none;
+    background-color: #47478a;
+    border-radius: 4px;
+    color: #fafafa;
+    margin-top: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+#textarea-play-button:hover {
+    background-color: #2d2d58;
 }
 
 .container {
@@ -13,6 +92,7 @@ body {
 
 .container div {
     display: flex;
+    margin: 80px 0 40px 0;
 }
 
 .white-keys kbd {
@@ -44,29 +124,29 @@ body {
     top: 0;
 }
 
-#Digit8 {left: 20px;}
-#Digit9 {left: 58px;}
-#Digit0 {left: 130px;}
-#Minus {left: 166px;}
-#Equal {left: 202px;}
+#Cb2 {left: 20px;}
+#Db2 {left: 58px;}
+#Fb2 {left: 130px;}
+#Gb2 {left: 166px;}
+#Ab2 {left: 202px;}
 
-#KeyI {left:274px;}
-#KeyO {left:310px;}
-#KeyP {left:382px;}
-#BracketLeft {left:418px;}
-#BracketRight {left:454px;}
+#Cb3 {left:274px;}
+#Db3 {left:310px;}
+#Fb3 {left:382px;}
+#Gb3 {left:418px;}
+#Ab3 {left:454px;}
 
-#KeyK {left:526px;}
-#KeyL {left:562px;}
-#Semicolon {left:634px;}
-#Quote {left:670px;}
-#Backslash {left:706px;}
+#Cb4 {left:526px;}
+#Db4 {left:562px;}
+#Fb4 {left:634px;}
+#Gb4 {left:670px;}
+#Ab4 {left:706px;}
 
-#Period {left:778px;}
-#Slash {left:814px;}
-#ShiftRight {left:886px;}
-#ControlRight {left:922px;}
-#Enter {left:958px;}
+#Cb5 {left:778px;}
+#Db5 {left:814px;}
+#Fb5 {left:886px;}
+#Gb5 {left:922px;}
+#Ab5 {left:958px;}
 
 .white-keys > .pressed {
     background-color: #ebebeb !important;
