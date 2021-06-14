@@ -4,17 +4,17 @@
     <meta charset="utf-8">
     <title>Virtual Piano</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="scripts.js"></script>
 </head>
 <body>
     <h1>Press robot emoji to make him play music or past 
-        notes from <a id="notes-link" href="https://pianoletternotes.blogspot.com/" target="_blank">this&nbsp;website</a> into text area</h1>
+        notes from <a id="notes-link" href="https://pianoletternotes.blogspot.com/" target="_blank">
+            this&nbsp;website</a> into text area</h1>
     <div id="input-area">
         <div id="robot-area">
             <button id="robot-icon">🤖</button>
         </div>
-        <form id="notes-imput-form">
-            <label for="notes">Past song notes here:</label><br>
+        <form id="notes-input-form">
+            <label for="notes-input">Past song notes here:</label><br>
             <textarea id="notes-input" name="notes"rows="10" cols="40"></textarea><br>
             <button type="button" id="textarea-play-button">Play</button>
         </form>
@@ -80,5 +80,7 @@
             <kbd id="Ab5">En.</kbd>
         </div>
     </div>
+
+    <script src="scripts.js" type="module" defer></script>
 </body>
 </html>
