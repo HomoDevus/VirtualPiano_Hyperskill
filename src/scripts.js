@@ -12,9 +12,9 @@ preload().then(() => {
             audio.play();
 
             // Добовляет класс со стилем нажатой клавиши
-            document.getElementById(decodeList[noteAudio]).classList.add("pressed");
+            document.getElementById(noteAudio).classList.add("pressed");
         } else {
-            console.log('Клавиши ' + event.code + 'не существует')
+            console.log('Клавиши ' + event.code + ' не существует')
         }
     });
 
@@ -22,7 +22,7 @@ preload().then(() => {
     document.addEventListener("keyup", function (event) {
         let noteAudio = decodeList[event.code];
         if (noteAudio !== undefined) {
-            document.getElementById(decodeList[noteAudio]).classList.remove("pressed");
+            document.getElementById(noteAudio).classList.remove("pressed");
         }
     });
 
