@@ -1,0 +1,19 @@
+{
+  "name": "VirtualPiano",
+  "version": "1.0.0",
+  "description": "This is not just a piano. It is able to automatically play thousand of melodies using 'pseudo notes'.",
+  "private": true,
+  "repository": "https://github.com/ItisEternity/VirtualPiano_Hyperskill.git",
+  "author": "ItisEternity <lavrovslava207@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "dependencies": {
+    "css-loader": "^6.7.1",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.73.0",
+    "webpack-cli": "^4.9.2"
+  }
+}

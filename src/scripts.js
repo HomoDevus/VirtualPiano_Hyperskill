@@ -1,5 +1,6 @@
 import {decodeList, preload} from './init.js'
 import robotSong from "./robotSong.js";
+import './styles.css'
 
 preload().then(() => {
     let robotButton = document.getElementById('robot-icon');
