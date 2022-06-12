@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Virtual Piano</title>
+  <link rel="stylesheet" href="../src/styles.css">
+</head>
+<body>
+<h1>Press robot emoji to make him play music or past
+  notes from <a id="notes-link" href="https://pianoletternotes.blogspot.com/" target="_blank">
+    Piano Letter Notes website</a> into text area</h1>
+<div id="input-area">
+  <div id="robot-area">
+    <button id="robot-icon">🤖</button>
+  </div>
+  <form id="notes-input-form">
+    <label for="notes-input">Past song notes here:</label><br>
+    <textarea
+      id="notes-input"
+      name="notes" rows="10"
+      cols="40"
+      placeholder="4|----c---d---e-d-c-c-e-c-g-|
+3|a-a---a---a---------------|
+
+4|c-e-c---------c---d-c-----|
+3|------g-g-b-g---g-----f-f-|
+
+4|----c---c-------c---d---e-|
+3|a-f---f---b-a-a---a---a---|
+..."
+    ></textarea><br>
+    <button type="button" id="textarea-play-button">Play</button>
+  </form>
+</div>
+<div class="container">
+  <div class="white-keys">
+    <kbd id="c2">1</kbd>
+    <kbd id="d2">2</kbd>
+    <kbd id="e2">3</kbd>
+    <kbd id="f2">4</kbd>
+    <kbd id="g2">5</kbd>
+    <kbd id="a2">6</kbd>
+    <kbd id="b2">7</kbd>
+
+    <kbd id="c3">Q</kbd>
+    <kbd id="d3">W</kbd>
+    <kbd id="e3">E</kbd>
+    <kbd id="f3">R</kbd>
+    <kbd id="g3">T</kbd>
+    <kbd id="a3">Y</kbd>
+    <kbd id="b3">U</kbd>
+
+    <kbd id="c4">A</kbd>
+    <kbd id="d4">S</kbd>
+    <kbd id="e4">D</kbd>
+    <kbd id="f4">F</kbd>
+    <kbd id="g4">G</kbd>
+    <kbd id="a4">H</kbd>
+    <kbd id="b4">J</kbd>
+
+    <kbd id="c5">Z</kbd>
+    <kbd id="d5">X</kbd>
+    <kbd id="e5">C</kbd>
+    <kbd id="f5">V</kbd>
+    <kbd id="g5">B</kbd>
+    <kbd id="a5">N</kbd>
+    <kbd id="b5">M</kbd>
+    <kbd id="c6">,</kbd>
+  </div>
+  <div class="black-keys">
+    <kbd id="Cb2">8</kbd>
+    <kbd id="Db2">9</kbd>
+    <kbd id="Fb2">0</kbd>
+    <kbd id="Gb2">-</kbd>
+    <kbd id="Ab2">=</kbd>
+
+    <kbd id="Cb3">I</kbd>
+    <kbd id="Db3">O</kbd>
+    <kbd id="Fb3">P</kbd>
+    <kbd id="Gb3">[</kbd>
+    <kbd id="Ab3">]</kbd>
+
+    <kbd id="Cb4">K</kbd>
+    <kbd id="Db4">L</kbd>
+    <kbd id="Fb4">;</kbd>
+    <kbd id="Gb4">'</kbd>
+    <kbd id="Ab4">\</kbd>
+
+    <kbd id="Cb5">.</kbd>
+    <kbd id="Db5">/</kbd>
+    <kbd id="Fb5">Sh.</kbd>
+    <kbd id="Gb5">Ct.</kbd>
+    <kbd id="Ab5">En.</kbd>
+  </div>
+</div>
+
+<script src="../src/scripts.js" type="module" defer></script>
+</body>
+</html>
